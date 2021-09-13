@@ -113,8 +113,8 @@
                   <!-- STAGE201　上左　ここから -->
                   <div class="col-2">
                     <!-- STAGE201問題セクション　ここから -->
-                    <div class="youtube__container">
-                    <img src="assets/images/step10.png" alt="謎10問目">
+                    <!-- <div class="youtube__container"> -->
+                    <img src="assets/images/STEP3謎.png" alt="謎10問目">
                     </figure>
 
                   </div>
@@ -144,12 +144,14 @@
           </div>
         </section>
         <!-- STAGE2クリア画面　ここから -->
-        <section v-if="stage201Answer && stage202Answer && stage203Answer && stage204Answer" v-bind:class="{isClear:stage201Answer && stage202Answer && stage203Answer && stage204Answer}" class="section section--clear bg-color--gray">
+        <section v-if="stage2Answer" v-bind:class="{isClear:stage2Answer}" class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">黒板の指示に従い、<br>
-                次のステージの謎を解こう！</div>
+              <div class="clear-message__content">本能寺の変とは、早朝、京都本能寺に滞在中の織田信長を家臣・明智光秀(あけちみつひで)が突如謀反(むほん)を起こして襲撃(しゅうげき)した事件である。
+                織田信長は包囲されたのを悟ると、寺に火を放ち自害して果てたと言われている。
+                <br>
+                </div>
                 <button v-on:click="stage2NextStage" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -162,15 +164,14 @@
         <!-- STAGE3問題セクション　ここから -->
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>家庭科室の課題とは</h2>
-            <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
-              どうやら、廃棄にかかる費用がかかりすぎて小学校の運営が厳しくなったようだ。。<br>
-              これらを解決するための最後の謎を解いていこう！</p>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>本当の地下脱出路</h2>
+            <p class="text-center">謎を解いて「あじさいの部屋」に辿り着いた。<br>
+              しかし様子がおかしい。怪しいところがひとつもないのだ。<br>
+              言い伝えは所詮言い伝えだったか...。諦めかけたその時、重大なことに気がついた。<br>
+              そうだ！これが作られたのは昔のことだから ——— 
+            </p>
             <figure class="image__container">
-              <img src="assets/images/stage.png" alt="">
-            </figure>
-            <figure class="image__container">
-              <img src="assets/images/stage.png" alt="">
+              <img src="assets/images/STEP3謎.png" alt="">
             </figure>
           </div>
         </section>
@@ -178,20 +179,65 @@
         <!-- STAGE3解答入力セクションここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h2>
             <div class="answer">
-              <input type="text" v-model="stage301" placeholder="①を入力"> の <input type="text" v-model="stage302" placeholder="②を入力"> は <input type="text" v-model="stage303" placeholder="③を入力"> である。
-            </div>
-            <div class="answer">
-              <input type="text" v-model="stage304" placeholder="④を入力"> することで <input type="text" v-model="stage305" placeholder="⑤を入力"> を <input type="text" v-model="stage306" placeholder="⑥を入力"> することができる！
+              <input class="answer__2word" type="text" v-model="stage3" placeholder="ここにキーワードを入力しよう">
             </div>
             <p class="err-message">{{ stage3Message }}</p>
-            <button v-on:click="stage3AnswerInput(stage301, stage302, stage303, stage304, stage305, stage306)">送信</button>
+            <button v-on:click="stage3AnswerInput(stage3)">送信</button>
             <a class="link-hint" href="hint.html#stage3" target="hint">ヒントをみる ></a>　
           </div>
         </section>
         <!-- STAGE3解答入力セクション　ここまで -->
+        <!-- STAGE3クリア画面　ここから -->
+        <section v-if="stage3Answer" v-bind:class="{isClear:stage3Answer}" class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：3　クリア！</div>
+              <div class="clear-message__content">
+                今度こそ謎を解いて「すいれんの部屋」に辿り着いた。<br>
+                注意深く部屋を見渡してみると畳に違和感がある。<br>
+                剥がしてみると地下へ続く階段があった！<br>
+                中を覗くと、奥の方まで暗い道が続いている。どうやら本当に地下脱出路のようだ。<br>
+                進んでみよう。<br>
+              </div>
+                <button v-on:click="stage3NextStage" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
       </div>
       <!-- STAGE3　ここまで -->
+      <!-- STAGE4　ここから -->
+      <div v-if="stage3Clear" id="sectionStage4" class="stage">
+        <!-- STAGE4問題セクション　ここから -->
+        <section class="section">
+          <div class="container">
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：4</span>最後の謎</h2>
+            <p class="text-center">——— 少し先に光が見える。もう少しで外に出れるかもしれない！<br>
+              少し進むと朽ち果てた扉が現れた。どうやら光はここから漏れていたらしい。<br>
+              ...鍵がかかっている。どうやら最後にもう一つ謎をとかないといけないようだ。          
+            </p>
+            <figure class="image__container">
+              <img src="assets/images/STEP4謎.png" alt="">
+            </figure>
+          </div>
+        </section>
+        <!-- STAGE4問題セクション　ここまで -->
+        <!-- STAGE4解答入力セクションここから -->
+        <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>キーワードを入力</h2>
+            <div class="answer">
+              <input class="answer__2word" type="text" v-model="stage4" placeholder="ここにキーワードを入力しよう">
+            </div>
+            <p class="err-message">{{ stage4Message }}</p>
+            <button v-on:click="stage4AnswerInput(stage4)">送信</button>
+            <a class="link-hint" href="hint.html#stage4" target="hint">ヒントをみる ></a>　
+          </div>
+        </section>
+        <!-- STAGE4解答入力セクション　ここまで -->
+      </div>
+      <!-- STAGE4　ここまで -->
     </div>
   </main>
   <footer class="footer section bg-color--gray">
