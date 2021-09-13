@@ -506,7 +506,7 @@ button {
 }
 
 .err-message {
-  color: #c8c2be;
+  /* color: #c8c2be; */
   font-size: 18px;
   text-align: center;
 }
