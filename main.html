@@ -45,8 +45,10 @@
               話を聞くと、最近捕まえた賊たちが持っていた暗号の解読に苦戦しているらしい。<br>
               代わりに暗号を解いて信頼を得られないだろうか。<br>
               
+            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
             <div class="youtube__container">
               <!-- 問題１貼り付け -->
+                <img src="assets/images/step9.png" alt="謎9問目">
                 <img src="assets/images/step1.png" alt="謎1問目">
                 <img src="assets/images/step2.png" alt="謎2問目">
                 <img src="assets/images/step3.png" alt="謎3問目">
@@ -55,7 +57,7 @@
                 <img src="assets/images/step6.png" alt="謎6問目">
                 <img src="assets/images/step7.png" alt="謎7問目">
                 <img src="assets/images/step8.png" alt="謎8問目">
-                <img src="assets/images/step9.png" alt="謎9問目">
+                
               <!-- 問題１貼り付け -->
             </div>
           </div>
@@ -155,6 +157,19 @@
             </div>
           </div>
         </section>
+        <!-- STAGE2 スペシャル画面 -->
+        <section v-if="specialAnswer" v-bind:class="{isClear:specialAnswer}" class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：2　クリア！</div>
+              <div class="clear-message__content">通常クリアのキーワード「あじさい」の花言葉は”裏切り”<br>
+                本当の答えのキーワード「すいれん」の花言葉は”真実”<br>
+                おめでとう！君は真の謎解き名人だ！
+                </div>
+                <button v-on:click="specialClear" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
         <!-- STAGE2クリア画面　ここまで -->
       </div>
       <!-- STAGE2　ここまで -->
@@ -189,7 +204,7 @@
         </section>
         <!-- STAGE3解答入力セクション　ここまで -->
         <!-- STAGE3クリア画面　ここから -->
-        <section v-if="stage3Answer" v-bind:class="{isClear:stage3Answer}" class="section section--clear bg-color--gray">
+        <section v-if="stage3Answer" v-bind:class="{isClear:stage3Answer}" class="section section--clear3 bg-color--gray">
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：3　クリア！</div>
