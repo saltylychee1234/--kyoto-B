@@ -8,7 +8,7 @@ const StageApp = Vue.createApp({
       stage1CorrectAnswer: 'なんばんぼうえき',
       stage2CorrectAnswer: 'あじさい',
       stage3CorrectAnswer: 'すいれん',
-      stage4CorrectAnswer: "ほんのうじ",
+      stage4CorrectAnswer: "本能寺",
 
       /* stage1 */
       stage1Answer: false, // 正解かどうか
@@ -30,6 +30,8 @@ const StageApp = Vue.createApp({
       // stage203Message: '',
       // stage204Message: '',
       stage2Clear: false,  // ステージクリア
+
+      specialAnswer: false,
 
       /* stage3 */
       stage3Answer: false, // 正解かどうか
@@ -65,6 +67,9 @@ const StageApp = Vue.createApp({
       if(stage2 === this.stage2CorrectAnswer) {
         this.stage2Answer = true;
         this.stage2Message = this.okMessage;
+      } else if (stage2 === this.stage3CorrectAnswer) {
+        this.specialAnswer = true
+        this.stage2Message = this.okMessage;
       } else {
         this.stage2Answer = false;
         this.stage2Message = this.ngMessage;
@@ -76,6 +81,13 @@ const StageApp = Vue.createApp({
       this.stage2Answer = false;
       this.stage2Clear = true;
     },
+
+    // スペシャルクリアの画面動作
+    specialClear() {
+      this.specialAnswer = false;
+      this.stage3Clear = true;
+    },
+
     /* stage3の入力を判定します */
     stage3AnswerInput(stage3) {
       if(stage3 === this.stage3CorrectAnswer) {
@@ -90,8 +102,8 @@ const StageApp = Vue.createApp({
       this.stage3Answer = false;
       this.stage3Clear = true;
     },
-    
-    // stage4の入力を判定
+
+    // stage4の判定を入力
     stage4AnswerInput(stage4) {
       if(stage4 === this.stage4CorrectAnswer) {
         this.stage4Answer = true;
