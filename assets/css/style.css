@@ -279,10 +279,14 @@ button {
   width: 100%;
   color: transparent;
   background-image: url("../images/title_bg.png");
-  -webkit-transform: translate(-3.5px, -3.5px);
-          transform: translate(-3.5px, -3.5px);
-  -webkit-text-stroke-color: #fff;
-  -webkit-text-stroke-width: 0.75px;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  
+  /* -webkit-transform: translate(-3.5px, -3.5px);
+          transform: translate(-3.5px, -3.5px); */
+  /* -webkit-text-stroke-color: #fff; */
+  /* -webkit-text-stroke-width: 0.75px; */
 }
 
 .sub-title {
