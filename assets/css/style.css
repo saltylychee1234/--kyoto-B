@@ -252,6 +252,12 @@ button {
   background-color:　#c8c2be;
 }
 
+.final_text-center{
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+}
+
 /*********************
 * title
 **********************/
