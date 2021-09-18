@@ -271,7 +271,27 @@ button {
   max-width: 800px;
   margin: 0 auto;
 }
+.stage1_lastQ {
+  width: 100%;
+}
 
+.stage1_mainQ li{
+  float: left;
+  list-style: none;
+  margin-right: 10px;
+  width: 500px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .stage1_mainQ li {
+      width: calc(100% - 40px);
+  }
+}
+ 
+.under-space{
+  clear: both;
+}
 /*********************
 * Color
 *********************/
