@@ -270,7 +270,7 @@ button {
   width: 100%;
 }
 
-.stage1_mainQ li{
+.stage1_mainQ{
   float: left;
   list-style: none;
   margin-right: 10px;
