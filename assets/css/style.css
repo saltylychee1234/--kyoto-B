@@ -272,9 +272,10 @@ button {
 
 .stage1_mainQ li{
   float: left;
-  width: 500px;
+  width: 45%;
   list-style: none;
   margin-right: 10px;
+  margin-left: 10px;
   text-align: center;
   
 }
