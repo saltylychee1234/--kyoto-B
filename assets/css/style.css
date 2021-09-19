@@ -270,15 +270,16 @@ button {
   width: 100%;
 }
 
-.stage1_mainQ{
+.stage1_mainQ li{
   float: left;
+  width: 500px;
   list-style: none;
   margin-right: 10px;
-  width: 500px;
   text-align: center;
+  
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
   .stage1_mainQ li {
       width: calc(100% - 40px);
   }
