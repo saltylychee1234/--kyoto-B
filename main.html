@@ -72,7 +72,7 @@
           <div class="container">
             <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを入力</h2>
             <div class="answer">
-              <input class="answer__1word" type="text" v-model="stage1" placeholder="ここにキーワードを入力しよう">
+              <input class="answer__1word" type="text" v-model="stage1" placeholder="ひらがなでキーワードを入力しよう">
             </div>
             <p class="err-message">{{ stage1Message }}</p>
             <button v-on:click="stage1AnswerInput(stage1)">送信</button>
@@ -136,7 +136,7 @@
               <div class="container">
                 <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
                 <div class="answer">
-                  <input class="answer__2word" type="text" v-model="stage2" placeholder="ここにキーワードを入力しよう">
+                  <input class="answer__2word" type="text" v-model="stage2" placeholder="ひらがなでキーワードを入力しよう">
                 </div>
                 <p class="err-message">{{ stage2Message }}</p>
                 <button v-on:click="stage2AnswerInput(stage2)">送信</button>
@@ -205,7 +205,7 @@
           <div class="container">
             <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h2>
             <div class="answer">
-              <input class="answer__2word" type="text" v-model="stage3" placeholder="ここにキーワードを入力しよう">
+              <input class="answer__2word" type="text" v-model="stage3" placeholder="ひらがなでキーワードを入力しよう">
             </div>
             <p class="err-message">{{ stage3Message }}</p>
             <button v-on:click="stage3AnswerInput(stage3)">送信</button>
@@ -254,7 +254,7 @@
           <div class="container">
             <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>キーワードを入力</h2>
             <div class="answer">
-              <input class="answer__2word" type="text" v-model="stage4" placeholder="ここにキーワードを入力しよう">
+              <input class="answer__2word" type="text" v-model="stage4" placeholder="漢字でキーワードを入力しよう">
             </div>
             <p class="err-message">{{ stage4Message }}</p>
             <button v-on:click="stage4AnswerInput(stage4)">送信</button>
